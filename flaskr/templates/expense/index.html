@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body" style="font-size: 20px;">
+        <h5 class="card-title">Joint US Bank</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Available: $500 <br>Cleared: $200</h6>
+        <a href="#" class="card-link">Filter</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body" style="font-size: 20px;">
+        <h5 class="card-title">Tata</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Available: $300 <br>Cleared: $29</h6>
+        <a href="#" class="card-link">Filter</a>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body" style="font-size: 20px;">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <a href="#" class="card-link">Filter</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<a class="action" href="{{ url_for('expense.create') }}">New Entry</a>
+{{ table }}
+{% endblock %}

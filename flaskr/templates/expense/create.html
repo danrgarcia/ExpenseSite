@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}New Expense{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method = "post">
+    <label for="payee">Payee</label>
+    <input name="payee" id="payee" value="{{ request.form['payee'] }}" required>
+    <label for="category">Category</label>
+    <input name="category" id="category" value="{{ request.form['category'] }}" required>
+    <label for="sub_category">Sub-Category</label>
+    <input name="sub_category" id="sub_category" value="{{ request.form['sub_category'] }}" required>
+    <label for="owner">Owner</label>
+    <input name="owner" id="owner" value="{{ request.form['owner'] }}" required>
+    <label for="debt">Debt</label>
+    <input name="debt" id="debt" value="{{ request.form['debt'] }}">
+    <label for="credit">Credit</label>
+    <input name="credit" id="credit" value="{{ request.form['credit'] }}">
+    <input type="submit" value="Save">
+</form>
+{% endblock %}
